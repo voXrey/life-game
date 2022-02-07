@@ -103,20 +103,21 @@ class Controller:
         """
         Create new generation of cells from the old
         """
-        # add crown
+        # add crowns
+        ## add 2 crown to can modify first and don't tuch the second
         self.addCrown(tab)
-        self.addCrown(tab)
+        self.addCrown(tab) 
 
         new_list = self.createList(len(tab.list), len(tab.list[0]))
 
-        for line in range(len(tab.list)-1):
-            for column in range(len(tab.list[0])-1):
-                edit = self.editCase(tab, (line, column))
-                new_list[line][column] = edit
+        for i in range(1, len(tab.list)-1):
+            for j in range(1, len(tab.list[0])-1):
+                edit = self.editCase(tab, (i, j))
+                new_list[i][j] = edit
 
         tab.list = new_list
 
-        # remove crown
+        # remove crowns
         self.removeCrown(tab)
         self.removeCrown(tab)
 
