@@ -7,4 +7,4 @@ I tried to make a MVC architecture
 - Download the last Release
 - Go to main.py file and set the COLUMNS, LINES and BOX_SIZE value
   (COLUMNS is the number of columns, LINES the number of lines, and BOX_SIZE the size of each cells
-- Execute the program
+- Execute program
